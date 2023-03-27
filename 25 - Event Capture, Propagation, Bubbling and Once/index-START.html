@@ -54,7 +54,7 @@
 
       divs.forEach((div) =>
         div.addEventListener("click", logText, {
-          capture: false, // firing events from inner to outer
+          capture: false, // firing events from inner to outer; capture DOWN (outer -> inner), bubble UP (inner -> outer)
           once: true, // unbind listening after first occurrence (removes event listener)
         })
       );
